@@ -143,7 +143,7 @@ export default function PortfolioApp() {
           <ul className="nav-links">
             <li>
               <a href="#work" aria-current={navCurrent === "work" ? "true" : "false"}>
-                Réalisations
+                Projets
               </a>
             </li>
             <li>
@@ -176,7 +176,6 @@ export default function PortfolioApp() {
 
       <main className="ui">
         <section className="section" id="hero" aria-labelledby="hero-title">
-          <p className="hero-role">{profile.role}</p>
           <h1 className="hero-name" id="hero-title">
             {profile.name}
           </h1>
@@ -187,17 +186,17 @@ export default function PortfolioApp() {
               Voir les démos
             </a>
             <a className="cta cta--ghost" href="#dossier">
-              Dossier technique
+              Voir les projets
             </a>
           </div>
         </section>
 
         <section className="section" id="work" aria-labelledby="work-title">
-          <p className="section-label">Portfolio</p>
-          <h2 id="work-title">Réalisations</h2>
+          <p className="section-label">Sélection</p>
+          <h2 id="work-title">Projets</h2>
           <p className="lead">
             Cliquez un projet : la scène bascule sur son univers (marque, stack,
-            valeur). Deux démos Next.js s’ouvrent sur le même serveur.
+            valeur). Deux démos s’ouvrent sur le même serveur.
           </p>
 
           <div className="work-block" id="live">
@@ -206,7 +205,7 @@ export default function PortfolioApp() {
               Démos en ligne
             </h3>
             <p className="work-note">
-              Relais et Simplement sont des apps React/Next — même process.
+              Relais et Simplement — apps React/Next, même process.
             </p>
             <ProjectList items={liveDemos} activeId={activeId} onSelect={openProject} />
           </div>
@@ -214,10 +213,10 @@ export default function PortfolioApp() {
           <div className="work-block" id="dossier">
             <h3 className="work-heading">
               <span className="work-dot" aria-hidden="true" />
-              Dossier de compétences
+              Projets livrés
             </h3>
             <p className="work-note">
-              Sept projets clients. Chaque sélection ouvre une scène dédiée.
+              Sept missions clients. Chaque sélection ouvre une scène dédiée.
             </p>
             <ProjectList
               items={dossierProjects}
@@ -231,8 +230,8 @@ export default function PortfolioApp() {
           <p className="section-label">Méthode &amp; outils</p>
           <h2 id="stack-title">Stack</h2>
           <p className="lead">
-            Du besoin métier à la mise en exploitation. Prompting et assistants IA
-            pour accélérer cadrage, code et itérations — sans remplacer l’architecture.
+            Du besoin métier à la mise en exploitation. L’IA accélère cadrage, code
+            et itérations — sans remplacer l’architecture.
           </p>
           <ul className="stack-tags">
             {profile.stack.map((t) => (

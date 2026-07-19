@@ -234,13 +234,12 @@ export const dossierProjects: Project[] = [
 export const projects: Project[] = [...liveDemos, ...dossierProjects];
 
 export const profile = {
-  name: "Thierno Barry",
-  shortName: "Thierno",
-  role: "Développeur fullstack",
+  name: "Dex",
+  shortName: "Dex",
   tagline:
-    "Je reprends, j’intègre et je fais tenir des systèmes en production — avec une exécution augmentée par l’IA.",
+    "On conçoit, intègre et fait tenir des systèmes en production — avec une exécution accélérée par l’IA.",
   pitch:
-    "Sept dossiers clients (ERP, CRM, mobile, transport, EdTech) et deux démos en ligne pour juger le rendu sans attendre un NDA.",
+    "Sélection de projets livrés (ERP, CRM, mobile, transport, EdTech) et deux démos live pour juger le rendu directement.",
   stack: [
     "Odoo",
     "Laravel / Filament",

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Thierno Barry — Portfolio",
-  description:
-    "Portfolio de Thierno Barry — développeur fullstack. Démos Relais & Simplement, dossier de compétences.",
+  title: "Dex",
+  description: "Dex — démos Relais & Simplement, projets sélectionnés.",
   icons: { icon: "/favicon.svg" },
 };
 
