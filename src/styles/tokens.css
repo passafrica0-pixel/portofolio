@@ -1,0 +1,38 @@
+:root {
+  /* Aligné sur l’illustration : bleu shirt + orange chaise */
+  --bg: oklch(1 0 0);
+  --bg-soft: oklch(0.97 0.015 240);
+  --surface: oklch(0.985 0.01 240);
+  --ink: oklch(0.22 0.04 255);
+  --muted: oklch(0.48 0.03 255);
+  --primary: oklch(0.55 0.17 250);
+  --accent: oklch(0.68 0.18 45);
+  --line: oklch(0.22 0.04 255 / 0.12);
+
+  --font-sans: var(--font-bricolage), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  --space-xs: 0.35rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  --radius: 0.5rem;
+  --radius-lg: 1rem;
+  --z-canvas: 0;
+  --z-veil: 5;
+  --z-ui: 10;
+  --z-nav: 20;
+  --z-panel: 30;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 0.6s;
+  --panel-w: min(34rem, 92vw);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur: 0.01ms;
+  }
+}
