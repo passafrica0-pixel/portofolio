@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { CookieBanner } from "@/components/simplement/CookieBanner";
-import { ProgressBar } from "@/components/simplement/ProgressBar";
-import { SiteFooter } from "@/components/simplement/SiteFooter";
-import { SiteHeader } from "@/components/simplement/SiteHeader";
-import "@/styles/simplement/tokens.css";
+import { CHROME_BOTTOM, CHROME_TOP } from "@/components/simplement-v2/fragments/chrome";
+import { SimplementRuntime } from "@/components/simplement-v2/SimplementRuntime";
 import "@/styles/simplement/site.css";
+import "@/styles/simplement/pages.css";
 
 export const metadata: Metadata = {
   title: "Simplement — Agence web Marseille",
@@ -12,6 +10,11 @@ export const metadata: Metadata = {
     "Agence web à Marseille, spécialiste en création de site internet performant. Sites pensés pour générer des leads.",
 };
 
+/**
+ * Layout v2 « Le flux ». Le chrome partagé (rideau, curseur, dock, drawer,
+ * footer, cookie) provient directement des maquettes validées : markup statique
+ * rendu tel quel, comportements rejoués par SimplementRuntime après hydratation.
+ */
 export default function SimplementLayout({
   children,
 }: Readonly<{
@@ -19,11 +22,10 @@ export default function SimplementLayout({
 }>) {
   return (
     <div className="simplement-root" data-demo="simplement">
-      <ProgressBar />
-      <SiteHeader />
-      <main>{children}</main>
-      <SiteFooter />
-      <CookieBanner />
+      <div dangerouslySetInnerHTML={{ __html: CHROME_TOP }} />
+      {children}
+      <div dangerouslySetInnerHTML={{ __html: CHROME_BOTTOM }} />
+      <SimplementRuntime />
     </div>
   );
 }
